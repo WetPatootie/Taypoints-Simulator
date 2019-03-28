@@ -20,12 +20,15 @@ public class AboutWindow {
         Label label1 = new Label();
         label1.setText("Taypoints Simulator v0.1");
         Label label2 = new Label("By WetPatootie yay!");
+        int taypoints;
+        taypoints = main.tayPoints;
+        Label label3 = new Label("" + taypoints);
 
         Button closeButton = new Button("My Github!");
         closeButton.setOnAction(event -> main.gitHub());
 
         VBox layout1 = new VBox(10);
-        layout1.getChildren().addAll(label1, label2, closeButton);
+        layout1.getChildren().addAll(label1, label2, label3, closeButton);
         layout1.setAlignment(Pos.CENTER);
 
         Scene scene = new Scene(layout1, 300, 300);
